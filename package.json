@@ -1,0 +1,33 @@
+{
+  "name": "quick-dish",
+  "version": "1.0.0",
+  "description": "A food delivery restfull api server side application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Abolfazl Panahiazar",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "joi": "^17.4.0",
+    "joi-objectid": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "loadash": "^1.0.0",
+    "mongoose": "^5.12.14",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
+    "pug": "^3.0.2",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
