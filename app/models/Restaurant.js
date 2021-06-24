@@ -23,6 +23,8 @@ const restaurantSchema = new mongoose.Schema({
   picture: String,
   comment: [commentSchema],
   menu: [foodSchema],
+  adminUsername: { type: String, required: true },
+  adminPassword: { type: String, required: true },
 });
 
 const model = mongoose.model("restaurant", restaurantSchema);

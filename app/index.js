@@ -4,7 +4,9 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const winston = require("winston");
 require("winston-mongodb");
+
 const ErrorMiddleware = require("./http/middleware/Error");
+const api = require("./routes/api");
 
 const app = express();
 
@@ -28,6 +30,7 @@ class Application {
     app.use(cors());
 
     // routes
+    app.use("/api", api);
 
     app.use(ErrorMiddleware);
   }
