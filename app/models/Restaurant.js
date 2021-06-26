@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
+const config = require("config");
 
 const commentSchema = new mongoose.Schema({
   user: { type: String, required: true },
@@ -26,6 +28,15 @@ const restaurantSchema = new mongoose.Schema({
   adminUsername: { type: String, required: true },
   adminPassword: { type: String, required: true },
 });
+
+restaurantSchema.methods.generateAuthToken = () => {
+  const data = {
+    _id: this._id,
+    username: this.adminUsername,
+    role: "restaurant",
+  };
+  return jwt.sign(data, config.get("jwtPrivateKey"));
+};
 
 const model = mongoose.model("restaurant", restaurantSchema);
 

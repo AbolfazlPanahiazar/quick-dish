@@ -25,4 +25,12 @@ const validateUpdateRestaurant = (data) => {
   return schema.validate(data);
 };
 
-module.exports = { validateCreateRestaurant, validateUpdateRestaurant };
+const loginValidator = (data) => {
+  const schema = Joi.object({
+    username: Joi.string().required(),
+    password: Joi.string().required()
+  });
+  return schema.validate(data);
+}
+
+module.exports = { validateCreateRestaurant, validateUpdateRestaurant, loginValidator };
