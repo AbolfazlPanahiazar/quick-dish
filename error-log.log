@@ -400,3 +400,80 @@
 {"message":"db connected","level":"info"}
 {"message":"db connected","level":"info"}
 {"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"data and salt arguments required","level":"error"}
+{"message":"data and salt arguments required","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"data and salt arguments required","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"data and salt arguments required","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"data and salt arguments required","level":"error"}
+{"message":"data and salt arguments required","level":"error"}
+{"message":"data and salt arguments required","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"expose":true,"statusCode":400,"status":400,"body":"{\r\n    \"name\": \"عطاویچ\",\r\n    \"description\": \"عطاویچ شریعتی\",\r\n    \"address\": \"شریعتی\",\r\n    \"adminUsername\": \"atavichAdmin\",\r\n}","type":"entity.parse.failed","level":"error","message":"Unexpected token } in JSON at position 127 Unexpected token } in JSON at position 127","stack":"SyntaxError: Unexpected token } in JSON at position 127\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\TenzuFrontend\\Desktop\\QuickDish\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\TenzuFrontend\\Desktop\\QuickDish\\node_modules\\body-parser\\lib\\read.js:121:18\n    at invokeCallback (C:\\Users\\TenzuFrontend\\Desktop\\QuickDish\\node_modules\\raw-body\\index.js:224:16)\n    at done (C:\\Users\\TenzuFrontend\\Desktop\\QuickDish\\node_modules\\raw-body\\index.js:213:7)\n    at IncomingMessage.onEnd (C:\\Users\\TenzuFrontend\\Desktop\\QuickDish\\node_modules\\raw-body\\index.js:273:7)\n    at IncomingMessage.emit (events.js:327:22)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"Cannot destructure property 'id' of 'params' as it is undefined.","level":"error"}
+{"message":"Cannot destructure property 'id' of 'params' as it is undefined.","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"Parameter \"filter\" to findOne() must be an object, got 60d44b9dfd14992de09de503","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"body is not defined","level":"error"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}
+{"message":"db connected","level":"info"}

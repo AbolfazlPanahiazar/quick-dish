@@ -2,7 +2,7 @@ const _ = require("lodash");
 const bcrypt = require("bcrypt");
 
 const RestaurantModel = require("../../models/Restaurant");
-const { validateRestaurant } = require("../validator/RestaurantValidator");
+const { validateCreateRestaurant, validateUpdateRestaurant } = require("../validator/RestaurantValidator");
 
 class RestaurantController {
   async getList(req, res) {
@@ -15,16 +15,16 @@ class RestaurantController {
   async getOne(req, res) {
     const { params } = req;
     const { id } = params;
-    const data = await RestaurantModel.findOne(id).select("-adminPassword");
+    const data = await RestaurantModel.findById(id).select("-adminPassword");
     if (!data) res.status(404).send("not found");
     res.send(data);
   }
 
   async create(req, res) {
     const { body } = req;
-    const { error } = validateRestaurant(body);
+    const { error } = validateCreateRestaurant(body);
     if (error) return res.status(400).send(error.message);
-    const restaurant = new RestaurantModel(
+    let restaurant = new RestaurantModel(
       _.pick(body, [
         "name",
         "description",
@@ -38,24 +38,21 @@ class RestaurantController {
       restaurant.adminPassword,
       salt
     );
-    await restaurant.save();
+    restaurant = await restaurant.save();
     res.send(
-      _.pick(restaurant, ["name", "description", "address", "adminUsername"])
+      _.pick(restaurant, ["name", "description", "address", "adminUsername", "_id"])
     );
   }
 
   async update(req, res) {
-    const { body } = req;
-    const { params } = body;
+    const { params, body } = req;
     const { id } = params;
-    const { error } = validateRestaurant(body);
+    const { error } = validateUpdateRestaurant(body);
     if (error) return res.status(400).send(error.message);
     const result = await RestaurantModel.findByIdAndUpdate(id, {
       $set: _.pick(
-        body,
-        _.pick(body, ["name", "description", "address", "adminUsername"])
-      ),
-    });
+        body,["name", "description", "address", "adminUsername"])
+    }, {new: true});
     if (!result) return res.status(404).send("not found");
     res.send(
       _.pick(result, ["name", "description", "address", "adminUsername"])
@@ -63,14 +60,11 @@ class RestaurantController {
   }
 
   async delete(req, res) {
-    const { body } = req;
-    const { params } = body;
+    const { params } = req;
     const { id } = params;
     const result = await RestaurantModel.findByIdAndDelete(id);
     if (!result) return res.status(404).send("not found");
-    res.send(
-      _.pick(result, ["name", "description", "address", "adminUsername"])
-    );
+    res.send("Deleted successfuly")
   }
 }
 
